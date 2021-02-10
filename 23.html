@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+<meta charset ="UTF-8">
+<meta name = "viewport" content = "width - device -width initial scale =1.0">
+<title>DOCUMENT</title>
+<style>
+.outer-block{
+    border:2px solid gray;
+    height:290px;
+    width:150px;
+    }
+    .inner-block{
+        border-radius:50%;
+        height:90px;
+        width:150px;
+        border:1px solid black;
+    }
+</style>
+<body>
+    <h2>Traffic Signals</h2>
+    <div class = "outer-block">
+        <div class = "inner-block red" id = "red">
+        </div>
+        <div class = "inner-block yellow" id ="yellow">
+        </div>
+        <div class ="inner-block green" id ="green">
+        </div>
+    </div>
+    <input type = "button" onclick="getColor('red')" value ="Red">
+    <input type = "button" onclick="getColor('yellow')" value="Yellow">
+    <input type ="button"  onclick="getColor('green')"  value="Green">
+    <script>
+        function getColor(color){
+        var redElement =document.getElementById('red');
+        var yellowElement=document.getElementById('yellow');
+        var greenElement=document.getElementById('green');
+        switch(color){
+            case 'red':{
+                redElement.style.backgroundColor='red';
+                yellowElement.style.backgroundColor='white';
+                greenElement.style.backgroundColor='white';
+                break;
+            }
+            case 'yellow':{
+                 yellowElement.style.backgroundColor='yellow';
+                 redElement.style.backgroundColor='white';
+                 greenElement.style.backgroundColor='white';
+                 break;
+            }
+            case 'green':{
+                greenElement.style.backgroundColor='green';
+                redElement.style.backgroundColor='white';
+                yellowElement.style.backgroundColor='white';
+                break;
+            }
+            default :{
+                redElement.style.backgroundColor='white';
+                yellowElement.style.backgroundColor='white';
+                greenElement.style.backgroundColor='white';
+            }
+            }
+            
+        }
+    </script>
+
+</body>
+</head>
+</html>
